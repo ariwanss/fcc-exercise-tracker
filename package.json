@@ -1,0 +1,29 @@
+{
+  "name": "fcc-exercise-tracker",
+  "version": "1.0.0",
+  "description": "a project from freecodecamp",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "debug": "node scratch.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariwanss/fcc-exercise-tracker.git"
+  },
+  "author": "Ariwan Sri Setya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ariwanss/fcc-exercise-tracker/issues"
+  },
+  "homepage": "https://github.com/ariwanss/fcc-exercise-tracker#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.4.5",
+    "nodemon": "^2.0.19"
+  }
+}
