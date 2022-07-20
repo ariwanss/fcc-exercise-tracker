@@ -1,5 +1,5 @@
 const User = require('../models/userModel');
-const { updateCounter } = require('../config/counter');
+const { updateCounter, resetCounter } = require('../config/counter');
 const asyncHandler = require('express-async-handler');
 
 const createUser = asyncHandler(async (req, res) => {
@@ -24,8 +24,18 @@ const getUsers = asyncHandler(async (req, res) => {
   res.json(users);
 }); 
 
+const deleteAllUsers = asyncHandler(async (req, res) => {
+  console.log('Deleting all users...');
+  let response = await User.deleteMany();
+  let { name: counterName, lastValue } = await resetCounter('exerciseTrackerUserCounter');
+  console.log(`Deleted: ${JSON.stringify(response)}`);
+  console.log(`Counter reset: ${JSON.stringify({counterName, lastValue})}`);
+  res.json({response, counterName, lastValue});
+})
+
 module.exports = {
   createUser,
   getUser,
-  getUsers
+  getUsers,
+  deleteAllUsers
 }

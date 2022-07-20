@@ -45,7 +45,15 @@ const getExercises = asyncHandler(async (req, res) => {
   res.json(userLog);
 });
 
+const deleteAllExercises = asyncHandler(async (req, res) => {
+  console.log('Deleting all exercise records...');
+  let response = await Exercise.deleteMany();
+  console.log(`Deleted: ${JSON.stringify(response)}`);
+  res.json(response);
+})
+
 module.exports = {
   createExercise,
-  getExercises
+  getExercises,
+  deleteAllExercises
 }

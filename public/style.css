@@ -21,6 +21,7 @@ h3 {
   align-items: flex-end;
   margin: -10px;
   margin-bottom: 20px;
+  max-width: 800px;
 }
 
 #create-user, #add-exercises {
