@@ -9,6 +9,9 @@
     "debug": "node scratch.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "16.14.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ariwanss/fcc-exercise-tracker.git"
