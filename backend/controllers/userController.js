@@ -14,7 +14,7 @@ const createUser = asyncHandler(async (req, res) => {
 
 const getUser = (_id) => {
   // console.log(`Searching for a user with _id: ${_id}...`);
-  return User.findOne({ _id: _id }).select({_id: 1, username: 1});
+  return User.findById(_id).select({_id: 1, username: 1});
 };
 
 const getUsers = asyncHandler(async (req, res) => {

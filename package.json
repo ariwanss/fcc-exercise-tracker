@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ariwanss/fcc-exercise-tracker#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
